@@ -32,6 +32,7 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
     <div
       ref={cardRef}
       onMouseMove={handleMouseMove}
+      data-cursor="view"
       className="relative flex flex-col justify-between p-6 rounded-3xl glass-panel glass-panel-hover group overflow-hidden"
       suppressHydrationWarning
     >

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./tailwind.css";
 import "./globals.css";
+import CustomCursor from "./components/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Balachandra S — CS Student & Full-Stack Developer",
@@ -39,6 +40,8 @@ export default function RootLayout({
         className="min-h-screen bg-[#F5F5F7] dark:bg-[#08080A] text-[#1D1D1F] dark:text-[#F5F5F7] antialiased selection:bg-blue-500 selection:text-white transition-colors duration-300"
         suppressHydrationWarning
       >
+        {/* Sleek Dual-Layer Custom Cursor Animation System */}
+        <CustomCursor />
         {children}
       </body>
     </html>

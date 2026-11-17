@@ -238,3 +238,59 @@ body {
   50% { transform: translate(-40px, -40px) scale(1.1); }
   100% { transform: translate(50px, 20px) scale(0.9); }
 }
+
+
+/* ==========================================================================
+   CUSTOM CURSOR STYLING & ACCESSIBILITY
+   ========================================================================== */
+
+/* Hide default cursor on desktop only when CustomCursor is hydrated and mounted */
+@media (pointer: fine) {
+  html.has-custom-cursor,
+  html.has-custom-cursor body {
+    cursor: none !important;
+  }
+
+  html.has-custom-cursor a,
+  html.has-custom-cursor button,
+  html.has-custom-cursor [role="button"],
+  html.has-custom-cursor [data-cursor="pointer"],
+  html.has-custom-cursor [data-cursor="view"],
+  html.has-custom-cursor .cursor-pointer {
+    cursor: none !important;
+  }
+
+  /* Preserve native text selection caret on form inputs and code blocks */
+  html.has-custom-cursor input,
+  html.has-custom-cursor textarea,
+  html.has-custom-cursor [contenteditable="true"],
+  html.has-custom-cursor select {
+    cursor: text !important;
+  }
+}
+
+/* Fallback for users with prefers-reduced-motion: disable custom cursor and show native pointer */
+@media (prefers-reduced-motion: reduce) {
+  html.has-custom-cursor,
+  html.has-custom-cursor body,
+  html.has-custom-cursor a,
+  html.has-custom-cursor button {
+    cursor: auto !important;
+  }
+}
+
+/* Smooth scale-in animation for the "Explore ↗" pill */
+@keyframes scaleInPill {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scaleInPill 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
