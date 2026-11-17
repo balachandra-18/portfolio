@@ -13,8 +13,11 @@ export interface ProjectItem {
 
 export default function ProjectCard({ project }: { project: ProjectItem }) {
   return (
-    <div className="flex flex-col justify-between p-6 rounded-3xl bg-white/70 dark:bg-neutral-900/60 backdrop-blur-xl border border-black/5 dark:border-white/10 shadow-xl shadow-black/5 hover:-translate-y-1 hover:border-blue-500/30 transition-all duration-300 group">
-      <div>
+    <div
+      className="flex flex-col justify-between p-6 rounded-3xl glass-panel glass-panel-hover group"
+      suppressHydrationWarning
+    >
+      <div suppressHydrationWarning>
         {/* Mockup Graphic Header */}
         <div className={`w-full h-40 rounded-2xl ${project.gradient} mb-5 flex items-center justify-center p-4 relative overflow-hidden shadow-inner`}>
           <div className="w-4/5 h-4/5 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 p-3 flex flex-col gap-2 shadow-lg group-hover:scale-105 transition-transform duration-300">
@@ -42,12 +45,13 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
         </p>
       </div>
 
-      <div className="pt-4 border-t border-black/5 dark:border-white/10 flex items-center justify-between gap-3 flex-wrap">
-        <div className="flex flex-wrap gap-1.5">
+      <div className="pt-4 border-t border-black/5 dark:border-white/10 flex items-center justify-between gap-3 flex-wrap" suppressHydrationWarning>
+        <div className="flex flex-wrap gap-1.5" suppressHydrationWarning>
           {project.tech.map((t) => (
             <span
               key={t}
-              className="px-2.5 py-1 rounded-md text-[11px] font-medium bg-black/5 dark:bg-white/5 text-neutral-600 dark:text-neutral-400"
+              className="px-2.5 py-1 rounded-md text-[11px] font-medium glass-chip text-neutral-600 dark:text-neutral-300"
+              suppressHydrationWarning
             >
               {t}
             </span>

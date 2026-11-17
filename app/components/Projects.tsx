@@ -33,8 +33,8 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-12 px-4 max-w-5xl mx-auto">
-      <div className="mb-8">
+    <section id="projects" className="py-12 px-4 max-w-5xl mx-auto" suppressHydrationWarning>
+      <div className="mb-8" suppressHydrationWarning>
         <span className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
           Selected Works
         </span>
@@ -46,7 +46,7 @@ export default function Projects() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6" suppressHydrationWarning>
         {projects.map((proj) => (
           <ProjectCard key={proj.id} project={proj} />
         ))}

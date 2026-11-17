@@ -11,12 +11,16 @@ export default function Home() {
       className="min-h-screen relative overflow-x-hidden selection:bg-blue-600 selection:text-white"
       suppressHydrationWarning
     >
-      {/* Ambient background glows */}
-      <div className="fixed top-0 left-1/4 w-96 h-96 bg-blue-500/10 dark:bg-blue-600/15 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="fixed bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-600/15 rounded-full blur-3xl pointer-events-none -z-10" />
+      {/* Ambient Aurora Glow Orbs for Frosted Glass Light Refraction */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10" suppressHydrationWarning>
+        <div className="ambient-glow-1" suppressHydrationWarning />
+        <div className="ambient-glow-2" suppressHydrationWarning />
+        <div className="ambient-glow-3" suppressHydrationWarning />
+        <div className="ambient-glow-4" suppressHydrationWarning />
+      </div>
 
       <Navbar />
-      <main className="space-y-6">
+      <main className="space-y-6" suppressHydrationWarning>
         <Hero />
         <About />
         <Projects />

@@ -8,11 +8,11 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-12 px-4 max-w-5xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+    <section id="about" className="py-12 px-4 max-w-5xl mx-auto" suppressHydrationWarning>
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6" suppressHydrationWarning>
         {/* Bio Card */}
-        <div className="md:col-span-6 p-8 rounded-3xl bg-white/70 dark:bg-neutral-900/60 backdrop-blur-xl border border-black/5 dark:border-white/10 shadow-xl shadow-black/5 flex flex-col justify-between">
-          <div>
+        <div className="md:col-span-6 p-8 rounded-3xl glass-panel flex flex-col justify-between" suppressHydrationWarning>
+          <div suppressHydrationWarning>
             <span className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
               Background
             </span>
@@ -27,13 +27,13 @@ export default function About() {
             </p>
           </div>
 
-          <div className="mt-6 pt-6 border-t border-black/5 dark:border-white/10 flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-400">
-            <div>
+          <div className="mt-6 pt-6 border-t border-black/5 dark:border-white/10 flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-400" suppressHydrationWarning>
+            <div suppressHydrationWarning>
               <span className="block font-bold text-neutral-900 dark:text-white text-base">Bengaluru, IN</span>
               <span>Based in</span>
             </div>
-            <div className="w-px h-8 bg-black/10 dark:bg-white/10" />
-            <div>
+            <div className="w-px h-8 bg-black/10 dark:bg-white/10" suppressHydrationWarning />
+            <div suppressHydrationWarning>
               <span className="block font-bold text-neutral-900 dark:text-white text-base">BIT (VTU)</span>
               <span>College</span>
             </div>
@@ -41,8 +41,8 @@ export default function About() {
         </div>
 
         {/* Skills Card */}
-        <div id="skills" className="md:col-span-6 p-8 rounded-3xl bg-white/70 dark:bg-neutral-900/60 backdrop-blur-xl border border-black/5 dark:border-white/10 shadow-xl shadow-black/5 flex flex-col justify-between">
-          <div>
+        <div id="skills" className="md:col-span-6 p-8 rounded-3xl glass-panel flex flex-col justify-between" suppressHydrationWarning>
+          <div suppressHydrationWarning>
             <span className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
               Technical Stack
             </span>
@@ -50,17 +50,18 @@ export default function About() {
               Skills & Tools
             </h2>
 
-            <div className="space-y-5">
+            <div className="space-y-5" suppressHydrationWarning>
               {skills.map((grp) => (
-                <div key={grp.category}>
+                <div key={grp.category} suppressHydrationWarning>
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-2">
                     {grp.category}
                   </h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2" suppressHydrationWarning>
                     {grp.items.map((skill) => (
                       <span
                         key={skill}
-                        className="px-3 py-1.5 rounded-full text-xs font-medium bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 text-neutral-800 dark:text-neutral-200 hover:border-blue-500/30 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        className="px-3 py-1.5 rounded-full text-xs font-medium glass-chip text-neutral-800 dark:text-neutral-200 cursor-default"
+                        suppressHydrationWarning
                       >
                         {skill}
                       </span>

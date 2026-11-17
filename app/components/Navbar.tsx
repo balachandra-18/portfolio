@@ -22,8 +22,8 @@ export default function Navbar() {
   }, [isDark, mounted]);
 
   return (
-    <header className="fixed top-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
-      <nav className="pointer-events-auto flex items-center gap-3 bg-white/70 dark:bg-[#16161A]/70 backdrop-blur-xl border border-black/5 dark:border-white/10 rounded-full px-4 py-2 shadow-lg shadow-black/5 transition-all">
+    <header className="fixed top-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none" suppressHydrationWarning>
+      <nav className="pointer-events-auto flex items-center gap-3 glass-navbar rounded-full px-4 py-2 transition-all" suppressHydrationWarning>
         <Link href="#hero" className="flex items-center gap-2 font-bold text-sm tracking-tight text-neutral-900 dark:text-white mr-2">
           <span className="w-6 h-6 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center text-xs font-semibold shadow-sm">
             BS
@@ -51,6 +51,7 @@ export default function Navbar() {
           onClick={() => setIsDark(!isDark)}
           aria-label="Toggle Theme"
           className="ml-2 p-1.5 rounded-full text-neutral-600 dark:text-neutral-300 hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+          suppressHydrationWarning
         >
           {isDark ? (
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
