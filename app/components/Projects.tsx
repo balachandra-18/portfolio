@@ -4,45 +4,55 @@ import ProjectCard, { ProjectItem } from "./ProjectCard";
 export default function Projects() {
   const projects: ProjectItem[] = [
     {
-      id: "cyber-shield",
-      title: "Cyber Fraud & UPI Shield",
-      description: "Intelligent threat detection and transaction security platform mitigating digital payment fraud in real time.",
-      tech: ["Python", "FastAPI", "React", "Next.js"],
-      githubUrl: "https://github.com/balachandra-18/cyber-shield",
-      category: "Security & FinTech",
-      gradient: "bg-gradient-to-tr from-blue-600 to-indigo-600"
+      id: "aurastream",
+      title: "AuraStream Studio",
+      description: "Interactive neural music synthesizer and 3D spatial audio-reactive visualizer built with Web Audio API and custom WebGL shaders.",
+      tech: ["TypeScript", "Three.js", "WebAudio", "Tailwind CSS"],
+      githubUrl: "https://github.com/balachandra-18/aurastream-studio",
+      category: "Spatial Audio & AI",
+      gradient: "bg-gradient-to-tr from-violet-600 via-purple-600 to-indigo-500",
+      badgeClass: "bg-purple-500/15 text-purple-600 dark:text-purple-300 border border-purple-500/25",
+      glowColor: "rgba(168, 85, 247, 0.25)",
+      mockupType: "audio",
     },
     {
-      id: "bit-tracker",
-      title: "BIT Study Tracker",
-      description: "A lightweight, time-blocked academic logbook and deadline management web application for college studies.",
-      tech: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
-      githubUrl: "https://github.com/balachandra-18/app_bit",
-      category: "Productivity & EdTech",
-      gradient: "bg-gradient-to-tr from-emerald-500 to-teal-600"
+      id: "neonpulse",
+      title: "NeonPulse Network",
+      description: "High-throughput zero-knowledge telemetry pipeline and decentralized peer-to-peer data stream engine with live consensus telemetry.",
+      tech: ["Rust", "Wasm", "Next.js", "GraphQL"],
+      githubUrl: "https://github.com/balachandra-18/neonpulse-network",
+      category: "Web3 & Distributed Systems",
+      gradient: "bg-gradient-to-tr from-cyan-500 via-teal-500 to-emerald-500",
+      badgeClass: "bg-cyan-500/15 text-cyan-600 dark:text-cyan-300 border border-cyan-500/25",
+      glowColor: "rgba(6, 182, 212, 0.25)",
+      mockupType: "network",
     },
     {
-      id: "cleanyourtv",
-      title: "CleanYourTV Launcher",
-      description: "Minimalist, high-performance custom Android TV launcher and debloater designed for streamlined navigation.",
-      tech: ["Kotlin", "Android SDK", "Shell", "ADB"],
-      githubUrl: "https://github.com/balachandra-18/cleanyourtv",
-      category: "Systems & Tooling",
-      gradient: "bg-gradient-to-tr from-orange-500 to-rose-600"
-    }
+      id: "omnicanvas",
+      title: "OmniCanvas Vision",
+      description: "Real-time edge-detected multi-layer collaborative infinite canvas featuring generative neural style transfer and SVG vector compilation.",
+      tech: ["Python", "FastAPI", "React", "Canvas API"],
+      githubUrl: "https://github.com/balachandra-18/omnicanvas-vision",
+      category: "Computer Vision & Creative Tools",
+      gradient: "bg-gradient-to-tr from-amber-500 via-orange-500 to-rose-600",
+      badgeClass: "bg-orange-500/15 text-orange-600 dark:text-orange-300 border border-orange-500/25",
+      glowColor: "rgba(249, 115, 22, 0.25)",
+      mockupType: "canvas",
+    },
   ];
 
   return (
     <section id="projects" className="py-12 px-4 max-w-5xl mx-auto" suppressHydrationWarning>
       <div className="mb-8" suppressHydrationWarning>
-        <span className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
-          Selected Works
-        </span>
-        <h2 className="text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-white mt-1">
-          Featured Projects
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-chip text-xs font-semibold text-blue-600 dark:text-blue-400 mb-2">
+          <span className="w-2 h-2 rounded-full bg-blue-500 animate-ping" />
+          <span>Innovations & Experiments</span>
+        </div>
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white mt-1">
+          Featured Engineering Projects
         </h2>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
-          A showcase of engineering and open-source software I have built.
+        <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-1.5 max-w-2xl leading-relaxed">
+          Explorations across spatial audio computing, decentralized distributed systems, and real-time computer vision.
         </p>
       </div>
 

@@ -1,3 +1,4 @@
+import CursorEffect from "./components/CursorEffect";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -11,6 +12,9 @@ export default function Home() {
       className="min-h-screen relative overflow-x-hidden selection:bg-blue-600 selection:text-white"
       suppressHydrationWarning
     >
+      {/* Interactive Cursor Follower & Ambient Glass Refraction Spotlight */}
+      <CursorEffect />
+
       {/* Ambient Aurora Glow Orbs for Frosted Glass Light Refraction */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10" suppressHydrationWarning>
         <div className="ambient-glow-1" suppressHydrationWarning />
