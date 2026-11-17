@@ -4,16 +4,22 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
+  const [mounted, setMounted] = useState(false);
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
     const root = document.documentElement;
     if (isDark) {
       root.classList.add("dark");
     } else {
       root.classList.remove("dark");
     }
-  }, [isDark]);
+  }, [isDark, mounted]);
 
   return (
     <header className="fixed top-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
